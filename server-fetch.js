@@ -43,6 +43,8 @@ app.get('/', async (req, res) => {
 	// // res.render("index");
 // });
 
+//https://geopluginservice-sw2qek0j.b4a.run/?from=KWD&to=USD&amount=1
+
 const getFetch = async () => {
 
 	let result = []
@@ -91,6 +93,7 @@ const getFetch2 = async (from, to) => {
 			//jsonpCallbackFunction: 'myCallback',
 			method: 'GET',
 			cache: 'no-cache',
+			timeout: 3000,
 		})
 
 		//console.log('a1')	
