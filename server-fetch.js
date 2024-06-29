@@ -93,7 +93,7 @@ const getFetch2 = async (from, to) => {
 			//jsonpCallbackFunction: 'myCallback',
 			method: 'GET',
 			cache: 'no-cache',
-			timeout: 3000,
+			timeout: 7000,
 		})
 
 		//console.log('a1')	
