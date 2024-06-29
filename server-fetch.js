@@ -25,9 +25,9 @@ const HOST = '0.0.0.0';
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
 
-// app.get('/', async (req, res) => {
-	// res.jsonp(await getFetch2(req.query.from, req.query.to));	
-// });
+app.get('/', async (req, res) => {
+	res.jsonp(await getFetch2(req.query.from, req.query.to));	
+});
 
 // app.get('/', async (req, res) => {
 	// res.jsonp(await getFetch2('KWD', 'USD'));
@@ -37,11 +37,11 @@ console.log(`Running on http://${HOST}:${PORT}`);
 	// res.jsonp(await getFetch());	
 // });
 
-app.get('/', async (req, res) => {
-	const path = require('path');
-	res.sendFile(path.join(__dirname, '/index.html'));
-	// res.render("index");
-});
+// app.get('/', async (req, res) => {
+	// const path = require('path');
+	// res.sendFile(path.join(__dirname, '/index.html'));
+	// // res.render("index");
+// });
 
 const getFetch = async () => {
 
